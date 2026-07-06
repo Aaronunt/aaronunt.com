@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Unt — Estonian Tech Entrepreneur</title>
+  <meta name="description" content="Aaron Unt is an Estonian tech entrepreneur from Pärnu. Founder of Valinor Partners and co-founder of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national economics olympiad champion.">
+  <link rel="canonical" href="https://aaronunt.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Aaron Unt — Estonian Tech Entrepreneur">
+  <meta property="og:description" content="Founder of Valinor Partners, co-founder of Gen Z Founders Society. Estronaut contest winner and three-time national economics olympiad champion.">
+  <meta property="og:url" content="https://aaronunt.com/">
+  <meta property="og:image" content="https://aaronunt.com/aaron-unt.jpg">
+
+  <!-- Person schema: tells Google this page is the entity home for Aaron Unt -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://aaronunt.com/#person",
+    "name": "Aaron Unt",
+    "givenName": "Aaron",
+    "familyName": "Unt",
+    "birthDate": "2006-06-20",
+    "gender": "Male",
+    "nationality": "Estonian",
+    "url": "https://aaronunt.com",
+    "image": "https://aaronunt.com/aaron-unt.jpg",
+    "description": "Estonian tech entrepreneur from Pärnu. Founder of Valinor Partners, co-founder of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national TalTech economics olympiad winner.",
+    "jobTitle": "Founder",
+    "homeLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pärnu",
+        "addressCountry": "EE"
+      }
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Pärnu Koidula Gümnaasium",
+      "url": "https://koidulag.edu.ee"
+    },
+    "worksFor": [
+      { "@type": "Organization", "name": "Valinor Partners" },
+      { "@type": "Organization", "name": "Jarvik Group OÜ" },
+      { "@type": "Organization", "name": "GenZ Asutajad MTÜ", "url": "https://www.genzfounders.ee" },
+      { "@type": "Organization", "name": "Teadustäht MTÜ" }
+    ],
+    "knowsAbout": [
+      "Entrepreneurship",
+      "E-commerce",
+      "Economics",
+      "Earth science",
+      "Music"
+    ],
+    "award": [
+      "Eesti otsib Estronauti contest winner (2024)",
+      "TalTech National Economics Olympiad winner (2023, 2024, 2025)",
+      "International Earth Science Olympiad medalist, Beijing (2 silver, 1 bronze)",
+      "Eurotalent Music Festival, 1st place"
+    ],
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q140445361",
+      "https://www.linkedin.com/in/aaron-unt",
+      "https://x.com/UntAaron",
+      "https://github.com/aaron-unt",
+      "https://www.genzfounders.ee"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --surface: #15181d;
+      --border: #262b33;
+      --text: #e8eaed;
+      --muted: #9aa3ad;
+      --accent: #5b9dff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 96px 0 64px; }
+    .kicker {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); font-size: 1.2rem; margin-top: 12px; max-width: 560px; }
+
+    .hero-photo {
+      width: 132px; height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    section { padding: 40px 0; border-top: 1px solid var(--border); }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    p + p { margin-top: 14px; }
+    .about p { font-size: 1.05rem; }
+
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .card .meta { color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.92rem; }
+
+    ul.press { list-style: none; }
+    ul.press li { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    ul.press li:last-child { border-bottom: none; }
+    ul.press a { color: var(--text); text-decoration: none; font-weight: 500; }
+    ul.press a:hover { color: var(--accent); }
+    ul.press .src { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+
+    footer { padding: 48px 0 64px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.88rem; }
+  </style>
+</head>
+<body>
+
+  <header class="wrap">
+    <img class="hero-photo" src="/aaron-unt.jpg" alt="Aaron Unt" width="132" height="132">
+    <p class="kicker">Estonian Tech Entrepreneur</p>
+    <h1>Aaron Unt</h1>
+    <p class="tagline">Founder of Valinor Partners. Co-founder of Gen Z Founders Society. Building companies from Estonia.</p>
+    <nav class="links">
+      <a href="https://www.linkedin.com/in/aaron-unt" rel="me">LinkedIn</a>
+      <a href="https://x.com/UntAaron" rel="me">X</a>
+      <a href="https://github.com/aaron-unt" rel="me">GitHub</a>
+      <a href="https://www.genzfounders.ee">Gen Z Founders</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>Aaron Unt (born 20 June 2006) is an Estonian tech entrepreneur from Pärnu. He is the founder of Valinor Partners, co-founder of Jarvik Group OÜ, and a board member and co-founder of Gen Z Founders Society (GenZ Asutajad MTÜ), a network that connects Estonia's most promising young founders. Together with his business partner he built a direct-to-consumer e-commerce portfolio that reached over $4.6M in annual recurring revenue.</p>
+      <p>In January 2025 he attended the World Economic Forum in Davos, representing the Global Shapers community in Tallinn. He also founded Teadustäht MTÜ, a nonprofit focused on science education.</p>
+      <p>Before founding his companies, Aaron built a national profile in Estonia through science and academic competitions. He won Estonia's first Estronaut contest, competed on the science television show Rakett 69, and medaled at the International Earth Science Olympiad in Beijing. He graduated from Pärnu Koidula Gümnaasium in 2025.</p>
+    </section>
+
+    <section id="ventures">
+      <h2>Ventures</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="meta">Founder</div>
+          <h3>Valinor Partners</h3>
+          <p>Venture and holding firm. Founded and led by Aaron.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Co-founder · 2025</div>
+          <h3>Jarvik Group OÜ</h3>
+          <p>Direct-to-consumer e-commerce portfolio built to $4.6M+ ARR with partner Bruno Jarvik.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Co-founder &amp; board member · 2024</div>
+          <h3>Gen Z Founders Society</h3>
+          <p>Community and mentorship network for Estonia's next generation of startup founders.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Founder · 2024</div>
+          <h3>Teadustäht MTÜ</h3>
+          <p>Nonprofit advancing science education for Estonian students.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recognition">
+      <h2>Recognition</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="meta">2024</div>
+          <h3>Estronaut Contest Winner</h3>
+          <p>One of 10 winners of "Eesti otsib Estronauti," selected from about 200 applicants. Flew a zero-gravity parabolic flight in Bordeaux and was received by President Alar Karis.</p>
+        </div>
+        <div class="card">
+          <div class="meta">2023 · 2024 · 2025</div>
+          <h3>National Economics Olympiad, 3x Winner</h3>
+          <p>First place in the national TalTech economics olympiad for high school students, three years in a row.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Beijing</div>
+          <h3>International Earth Science Olympiad</h3>
+          <p>Represented Estonia and won three medals: two silver and one bronze.</p>
+        </div>
+        <div class="card">
+          <div class="meta">ETV · Season 14</div>
+          <h3>Rakett 69</h3>
+          <p>Contestant on Estonia's national science competition show, selected from hundreds of applicants.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Davos · 2025</div>
+          <h3>World Economic Forum</h3>
+          <p>Attended the WEF Annual Meeting in Davos representing Global Shapers Tallinn.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Music</div>
+          <h3>Eurotalent Festival, 1st Place</h3>
+          <p>First place at the international Eurotalent Music Festival. Honors graduate of Pärnu Music School in flute, piano, and organ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="press">
+      <h2>Press &amp; Coverage</h2>
+      <ul class="press">
+        <li>
+          <a href="https://teadus.postimees.ee/8232391/maateaduste-olumpiaadi-medalist-peame-valtima-olukorda-kus-lahenduste-otsimisel-seatakse-esikohale-geopoliitilised-huvid-ja-omakasu">Earth science olympiad medalist on science-based decision making</a>
+          <span class="src">Postimees Teadus / Horisont · April 2025</span>
+        </li>
+        <li>
+          <a href="https://miks.ee/opilasele/isikulood/raketlane-aaron-unt-hariduse-olulisus-seisneb-selle-kasutamise-voimekuses/">Raketlane Aaron Unt: the value of education lies in the ability to use it</a>
+          <span class="src">Miks.ee</span>
+        </li>
+        <li>
+          <a href="https://eeter.err.ee/1609234635/rakett-69-tiimid-alustavad-esimest-voistlust">Rakett 69 teams begin their first competition</a>
+          <span class="src">ERR · January 2024</span>
+        </li>
+        <li>
+          <a href="https://parnu.postimees.ee/7943031/labi-tiheda-kadalipu-joudis-kolm-parnumaalast-rakett-69-pardale">Three from Pärnu County make it aboard Rakett 69</a>
+          <span class="src">Pärnu Postimees · January 2024</span>
+        </li>
+        <li>
+          <a href="https://koidulag.edu.ee/et/uudised/estronaut-aaron-unt-kohtus-presidendiga">Estronaut Aaron Unt meets the President</a>
+          <span class="src">Pärnu Koidula Gümnaasium · September 2024</span>
+        </li>
+        <li>
+          <a href="https://innovationsoftheworld.com/genz-founders-cultivating-estonias-next-wave-of-unicorns/">Gen Z Founders: cultivating Estonia's next wave of unicorns</a>
+          <span class="src">Innovations of the World</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>The fastest way to reach Aaron is on <a href="https://www.linkedin.com/in/aaron-unt" style="color: var(--accent);">LinkedIn</a> or <a href="https://x.com/UntAaron" style="color: var(--accent);">X</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Aaron Unt · Pärnu, Estonia</p>
+    </div>
+  </footer>
+
+</body>
+</html>
