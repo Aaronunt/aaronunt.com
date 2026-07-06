@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aaron Unt — Estonian Tech Entrepreneur</title>
-  <meta name="description" content="Aaron Unt is an Estonian tech entrepreneur from Pärnu. Founder of Valinor Partners and co-founder of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national economics olympiad champion.">
+  <meta name="description" content="Aaron Unt is an Estonian tech entrepreneur. Founder of Valinor Partners and founding board member of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national economics olympiad winner.">
   <link rel="canonical" href="https://aaronunt.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Aaron Unt — Estonian Tech Entrepreneur">
-  <meta property="og:description" content="Founder of Valinor Partners, co-founder of Gen Z Founders Society. Estronaut contest winner and three-time national economics olympiad champion.">
+  <meta property="og:description" content="Founder of Valinor Partners. Founding board member of Gen Z Founders Society. Estronaut contest winner and three-time national economics olympiad winner.">
   <meta property="og:url" content="https://aaronunt.com/">
   <meta property="og:image" content="https://aaronunt.com/aaron-unt.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Person schema: tells Google this page is the entity home for Aaron Unt -->
   <script type="application/ld+json">
@@ -28,7 +32,7 @@
     "nationality": "Estonian",
     "url": "https://aaronunt.com",
     "image": "https://aaronunt.com/aaron-unt.jpg",
-    "description": "Estonian tech entrepreneur from Pärnu. Founder of Valinor Partners, co-founder of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national TalTech economics olympiad winner.",
+    "description": "Estonian tech entrepreneur. Founder of Valinor Partners, founding board member of Gen Z Founders Society. Winner of Estonia's Estronaut contest and three-time national TalTech economics olympiad winner.",
     "jobTitle": "Founder",
     "homeLocation": {
       "@type": "Place",
@@ -74,220 +78,394 @@
 
   <style>
     :root {
-      --bg: #0d0f12;
-      --surface: #15181d;
-      --border: #262b33;
-      --text: #e8eaed;
-      --muted: #9aa3ad;
-      --accent: #5b9dff;
+      --bg: #0b0b0c;
+      --bg-soft: #121214;
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #f2f0eb;
+      --muted: #8f8f94;
+      --accent: #d8c9a3;
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.65;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-    .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+    ::selection { background: var(--accent); color: #111; }
 
-    header { padding: 96px 0 64px; }
-    .kicker {
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+    /* ---------- Nav ---------- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(11, 11, 12, 0.7);
+      border-bottom: 1px solid var(--line);
     }
-    h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
-    .tagline { color: var(--muted); font-size: 1.2rem; margin-top: 12px; max-width: 560px; }
+    .nav-inner {
+      max-width: 1080px; margin: 0 auto; padding: 18px 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-name { font-family: var(--serif); font-size: 1.25rem; letter-spacing: 0.01em; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 26px; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    @media (max-width: 640px) { .nav-links { display: none; } }
 
+    /* ---------- Hero ---------- */
+    .hero { min-height: 100svh; display: flex; align-items: center; position: relative; }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 45% at 75% 20%, rgba(216, 201, 163, 0.07), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 15% 85%, rgba(216, 201, 163, 0.04), transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px;
+      align-items: center; width: 100%; padding-top: 72px;
+    }
+    @media (max-width: 820px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 110px; padding-bottom: 60px; }
+    }
+    .hero-kicker {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 22px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(4rem, 11vw, 7.5rem);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -0.015em;
+    }
+    .hero-sub {
+      margin-top: 26px; font-size: 1.15rem; color: var(--muted); max-width: 480px;
+    }
+    .hero-sub em { font-family: var(--serif); font-style: italic; color: var(--text); font-size: 1.2em; }
+    .hero-cta { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; font-size: 0.88rem; font-weight: 600;
+      padding: 13px 26px; border-radius: 999px; transition: all 0.2s;
+    }
+    .btn-solid { background: var(--text); color: #111; }
+    .btn-solid:hover { background: var(--accent); }
+    .btn-ghost { color: var(--text); border: 1px solid var(--line); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-photo-frame { position: relative; justify-self: end; }
+    @media (max-width: 820px) { .hero-photo-frame { justify-self: start; } }
+    .hero-photo-frame::after {
+      content: ""; position: absolute; inset: 0;
+      border: 1px solid var(--line); border-radius: 18px;
+      transform: translate(16px, 16px); z-index: -1;
+    }
     .hero-photo {
-      width: 132px; height: 132px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--border);
-      margin-bottom: 28px;
-      display: block;
+      width: min(340px, 70vw); aspect-ratio: 3 / 4; object-fit: cover;
+      border-radius: 18px; display: block;
+      filter: saturate(0.92) contrast(1.03);
     }
 
-    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .links a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 8px 16px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: border-color 0.15s ease, color 0.15s ease;
-    }
-    .links a:hover { border-color: var(--accent); color: var(--accent); }
+    /* ---------- Sections ---------- */
+    section { padding: 110px 0; border-top: 1px solid var(--line); }
+    .sec-head { display: flex; align-items: baseline; gap: 20px; margin-bottom: 56px; }
+    .sec-num { font-size: 0.8rem; color: var(--accent); font-weight: 600; letter-spacing: 0.15em; }
+    h2 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; letter-spacing: -0.01em; }
 
-    section { padding: 40px 0; border-top: 1px solid var(--border); }
-    h2 {
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-    p + p { margin-top: 14px; }
-    .about p { font-size: 1.05rem; }
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 64px; }
+    @media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .about-text p { font-size: 1.14rem; color: #cfcdc7; }
+    .about-text p + p { margin-top: 22px; }
+    .about-text strong { color: var(--text); font-weight: 600; }
+    .facts { display: flex; flex-direction: column; gap: 0; }
+    .fact { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .fact:first-child { border-top: 1px solid var(--line); }
+    .fact .k { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .fact .v { font-size: 1.02rem; margin-top: 3px; }
 
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
+    /* Ventures */
+    .venture-list { display: flex; flex-direction: column; }
+    .venture {
+      display: grid; grid-template-columns: 200px 1fr auto; gap: 28px; align-items: baseline;
+      padding: 34px 0; border-bottom: 1px solid var(--line);
+      transition: background 0.2s; text-decoration: none; color: inherit;
     }
-    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
-    .card .meta { color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
-    .card p { color: var(--muted); font-size: 0.92rem; }
+    .venture:first-child { border-top: 1px solid var(--line); }
+    @media (max-width: 700px) { .venture { grid-template-columns: 1fr; gap: 6px; } }
+    .venture h3 { font-family: var(--serif); font-size: 1.7rem; font-weight: 400; }
+    .venture p { color: var(--muted); font-size: 0.98rem; max-width: 520px; }
+    .venture .role { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
 
+    /* Recognition timeline */
+    .timeline { position: relative; }
+    .tl-item {
+      display: grid; grid-template-columns: 120px 1fr; gap: 36px;
+      padding: 30px 0; border-bottom: 1px solid var(--line);
+    }
+    .tl-item:first-child { border-top: 1px solid var(--line); }
+    @media (max-width: 700px) { .tl-item { grid-template-columns: 1fr; gap: 4px; } }
+    .tl-year { font-family: var(--serif); font-size: 1.35rem; color: var(--accent); }
+    .tl-item h3 { font-size: 1.12rem; font-weight: 600; margin-bottom: 6px; }
+    .tl-item p { color: var(--muted); font-size: 0.98rem; max-width: 640px; }
+
+    /* Press */
     ul.press { list-style: none; }
-    ul.press li { padding: 14px 0; border-bottom: 1px solid var(--border); }
-    ul.press li:last-child { border-bottom: none; }
-    ul.press a { color: var(--text); text-decoration: none; font-weight: 500; }
-    ul.press a:hover { color: var(--accent); }
-    ul.press .src { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+    ul.press li { border-bottom: 1px solid var(--line); }
+    ul.press li:first-child { border-top: 1px solid var(--line); }
+    ul.press a {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
+      padding: 26px 0; color: var(--text); text-decoration: none; transition: padding-left 0.25s ease;
+    }
+    ul.press a:hover { padding-left: 12px; }
+    ul.press a:hover .t { color: var(--accent); }
+    ul.press .t { font-size: 1.08rem; font-weight: 500; transition: color 0.2s; }
+    ul.press .src { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+    @media (max-width: 700px) {
+      ul.press a { flex-direction: column; gap: 4px; }
+      ul.press .src { white-space: normal; }
+    }
 
-    footer { padding: 48px 0 64px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.88rem; }
+    /* Contact */
+    .contact { text-align: center; padding: 130px 0; }
+    .contact h2 { font-size: clamp(2.6rem, 6vw, 4.2rem); margin-bottom: 18px; }
+    .contact p { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+    .contact .links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    footer { border-top: 1px solid var(--line); padding: 34px 0; }
+    .foot { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.85rem; flex-wrap: wrap; gap: 10px; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
   </style>
 </head>
 <body>
 
-  <header class="wrap">
-    <img class="hero-photo" src="/aaron-unt.jpg" alt="Aaron Unt" width="132" height="132">
-    <p class="kicker">Estonian Tech Entrepreneur</p>
-    <h1>Aaron Unt</h1>
-    <p class="tagline">Founder of Valinor Partners. Co-founder of Gen Z Founders Society. Building companies from Estonia.</p>
-    <nav class="links">
-      <a href="https://www.linkedin.com/in/aaron-unt" rel="me">LinkedIn</a>
-      <a href="https://x.com/UntAaron" rel="me">X</a>
-      <a href="https://github.com/aaron-unt" rel="me">GitHub</a>
-      <a href="https://www.genzfounders.ee">Gen Z Founders</a>
-    </nav>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-name" href="#">Aaron Unt</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#press">Press</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Estonian Tech Entrepreneur</p>
+        <h1>Aaron Unt</h1>
+        <p class="hero-sub">Founder of <em>Valinor Partners</em>. Building companies from Estonia, the world's best place to start.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="https://www.linkedin.com/in/aaron-unt">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://x.com/UntAaron">Follow on X</a>
+        </div>
+      </div>
+      <div class="hero-photo-frame">
+        <img class="hero-photo" src="/aaron-unt.jpg" alt="Aaron Unt in Davos, Switzerland" width="340" height="453">
+      </div>
+    </div>
   </header>
 
-  <main class="wrap">
+  <main>
 
-    <section class="about" id="about">
-      <h2>About</h2>
-      <p>Aaron Unt (born 20 June 2006) is an Estonian tech entrepreneur from Pärnu. He is the founder of Valinor Partners, co-founder of Jarvik Group OÜ, and a board member and co-founder of Gen Z Founders Society (GenZ Asutajad MTÜ), a network that connects Estonia's most promising young founders. Together with his business partner he built a direct-to-consumer e-commerce portfolio that reached over $4.6M in annual recurring revenue.</p>
-      <p>In January 2025 he attended the World Economic Forum in Davos, representing the Global Shapers community in Tallinn. He also founded Teadustäht MTÜ, a nonprofit focused on science education.</p>
-      <p>Before founding his companies, Aaron built a national profile in Estonia through science and academic competitions. He won Estonia's first Estronaut contest, competed on the science television show Rakett 69, and medaled at the International Earth Science Olympiad in Beijing. He graduated from Pärnu Koidula Gümnaasium in 2025.</p>
+    <section id="about">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">01</span><h2>About</h2></div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Aaron Unt (born 20 June 2006) is an Estonian tech entrepreneur from Pärnu. He is the founder of <strong>Valinor Partners</strong>, co-founder of <strong>Jarvik Group</strong>, and a founding board member of <strong>Gen Z Founders Society</strong>, a network that connects Estonia's most promising young founders. Together with his business partner he built a direct-to-consumer e-commerce portfolio that reached over <strong>$4.6M in annual recurring revenue</strong>.</p>
+            <p>In January 2025 he attended the <strong>World Economic Forum</strong> in Davos, representing the Global Shapers community in Tallinn. He also founded Teadustäht MTÜ, a nonprofit focused on science education.</p>
+            <p>Before founding his companies, Aaron built a national profile in Estonia through science and academic competitions: he won Estonia's first Estronaut contest, competed on the science television show Rakett 69, and medaled at the International Earth Science Olympiad in Beijing.</p>
+          </div>
+          <div class="facts reveal">
+            <div class="fact"><div class="k">Based in</div><div class="v">Estonia</div></div>
+            <div class="fact"><div class="k">Focus</div><div class="v">E-commerce, ventures</div></div>
+            <div class="fact"><div class="k">Education</div><div class="v">Pärnu Koidula Gümnaasium</div></div>
+            <div class="fact"><div class="k">Languages</div><div class="v">Estonian, English</div></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="ventures">
-      <h2>Ventures</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="meta">Founder</div>
-          <h3>Valinor Partners</h3>
-          <p>Venture and holding firm. Founded and led by Aaron.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Co-founder · 2025</div>
-          <h3>Jarvik Group OÜ</h3>
-          <p>Direct-to-consumer e-commerce portfolio built to $4.6M+ ARR with partner Bruno Jarvik.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Co-founder &amp; board member · 2024</div>
-          <h3>Gen Z Founders Society</h3>
-          <p>Community and mentorship network for Estonia's next generation of startup founders.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Founder · 2024</div>
-          <h3>Teadustäht MTÜ</h3>
-          <p>Nonprofit advancing science education for Estonian students.</p>
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">02</span><h2>Ventures</h2></div>
+        <div class="venture-list">
+          <div class="venture reveal">
+            <span class="role">Founder</span>
+            <div>
+              <h3>Valinor Partners</h3>
+              <p>Venture and holding firm. Founded and led by Aaron.</p>
+            </div>
+          </div>
+          <div class="venture reveal">
+            <span class="role">Co-founder</span>
+            <div>
+              <h3>Jarvik Group</h3>
+              <p>Direct-to-consumer e-commerce portfolio built to $4.6M+ ARR with partner Bruno Jarvik.</p>
+            </div>
+          </div>
+          <a class="venture reveal" href="https://www.genzfounders.ee">
+            <span class="role">Founding board member</span>
+            <div>
+              <h3>Gen Z Founders Society</h3>
+              <p>Community and mentorship network for Estonia's next generation of startup founders.</p>
+            </div>
+          </a>
+          <div class="venture reveal">
+            <span class="role">Founder</span>
+            <div>
+              <h3>Teadustäht</h3>
+              <p>Nonprofit advancing science education for Estonian students.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="recognition">
-      <h2>Recognition</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="meta">2024</div>
-          <h3>Estronaut Contest Winner</h3>
-          <p>One of 10 winners of "Eesti otsib Estronauti," selected from about 200 applicants. Flew a zero-gravity parabolic flight in Bordeaux and was received by President Alar Karis.</p>
-        </div>
-        <div class="card">
-          <div class="meta">2023 · 2024 · 2025</div>
-          <h3>National Economics Olympiad, 3x Winner</h3>
-          <p>First place in the national TalTech economics olympiad for high school students, three years in a row.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Beijing</div>
-          <h3>International Earth Science Olympiad</h3>
-          <p>Represented Estonia and won three medals: two silver and one bronze.</p>
-        </div>
-        <div class="card">
-          <div class="meta">ETV · Season 14</div>
-          <h3>Rakett 69</h3>
-          <p>Contestant on Estonia's national science competition show, selected from hundreds of applicants.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Davos · 2025</div>
-          <h3>World Economic Forum</h3>
-          <p>Attended the WEF Annual Meeting in Davos representing Global Shapers Tallinn.</p>
-        </div>
-        <div class="card">
-          <div class="meta">Music</div>
-          <h3>Eurotalent Festival, 1st Place</h3>
-          <p>First place at the international Eurotalent Music Festival. Honors graduate of Pärnu Music School in flute, piano, and organ.</p>
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">03</span><h2>Recognition</h2></div>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-year">2025</div>
+            <div>
+              <h3>World Economic Forum, Davos</h3>
+              <p>Attended the WEF Annual Meeting representing Global Shapers Tallinn.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-year">2023–25</div>
+            <div>
+              <h3>National Economics Olympiad, three-time winner</h3>
+              <p>First place in the national TalTech economics olympiad three years in a row.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-year">2024</div>
+            <div>
+              <h3>Estronaut contest winner</h3>
+              <p>One of 10 winners of "Eesti otsib Estronauti," selected from about 200 applicants. Flew a zero-gravity parabolic flight in Bordeaux and was received by President Alar Karis.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-year">2024</div>
+            <div>
+              <h3>International Earth Science Olympiad, Beijing</h3>
+              <p>Represented Estonia and won three medals: two silver and one bronze.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-year">2024</div>
+            <div>
+              <h3>Rakett 69, season 14</h3>
+              <p>Contestant on Estonia's national science competition show on ETV, selected from hundreds of applicants.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-year">2022</div>
+            <div>
+              <h3>Eurotalent Music Festival, 1st place</h3>
+              <p>First place at the international festival spanning 26 countries. Honors graduate of Pärnu Music School in flute, piano, and organ.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="press">
-      <h2>Press &amp; Coverage</h2>
-      <ul class="press">
-        <li>
-          <a href="https://teadus.postimees.ee/8232391/maateaduste-olumpiaadi-medalist-peame-valtima-olukorda-kus-lahenduste-otsimisel-seatakse-esikohale-geopoliitilised-huvid-ja-omakasu">Earth science olympiad medalist on science-based decision making</a>
-          <span class="src">Postimees Teadus / Horisont · April 2025</span>
-        </li>
-        <li>
-          <a href="https://miks.ee/opilasele/isikulood/raketlane-aaron-unt-hariduse-olulisus-seisneb-selle-kasutamise-voimekuses/">Raketlane Aaron Unt: the value of education lies in the ability to use it</a>
-          <span class="src">Miks.ee</span>
-        </li>
-        <li>
-          <a href="https://eeter.err.ee/1609234635/rakett-69-tiimid-alustavad-esimest-voistlust">Rakett 69 teams begin their first competition</a>
-          <span class="src">ERR · January 2024</span>
-        </li>
-        <li>
-          <a href="https://parnu.postimees.ee/7943031/labi-tiheda-kadalipu-joudis-kolm-parnumaalast-rakett-69-pardale">Three from Pärnu County make it aboard Rakett 69</a>
-          <span class="src">Pärnu Postimees · January 2024</span>
-        </li>
-        <li>
-          <a href="https://koidulag.edu.ee/et/uudised/estronaut-aaron-unt-kohtus-presidendiga">Estronaut Aaron Unt meets the President</a>
-          <span class="src">Pärnu Koidula Gümnaasium · September 2024</span>
-        </li>
-        <li>
-          <a href="https://innovationsoftheworld.com/genz-founders-cultivating-estonias-next-wave-of-unicorns/">Gen Z Founders: cultivating Estonia's next wave of unicorns</a>
-          <span class="src">Innovations of the World</span>
-        </li>
-      </ul>
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">04</span><h2>Press</h2></div>
+        <ul class="press">
+          <li class="reveal">
+            <a href="https://teadus.postimees.ee/8232391/maateaduste-olumpiaadi-medalist-peame-valtima-olukorda-kus-lahenduste-otsimisel-seatakse-esikohale-geopoliitilised-huvid-ja-omakasu">
+              <span class="t">Earth science olympiad medalist on science-based decision making</span>
+              <span class="src">Postimees · 2025</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://miks.ee/opilasele/isikulood/raketlane-aaron-unt-hariduse-olulisus-seisneb-selle-kasutamise-voimekuses/">
+              <span class="t">The value of education lies in the ability to use it</span>
+              <span class="src">Miks.ee</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://eeter.err.ee/1609234635/rakett-69-tiimid-alustavad-esimest-voistlust">
+              <span class="t">Rakett 69 teams begin their first competition</span>
+              <span class="src">ERR · 2024</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://parnu.postimees.ee/7943031/labi-tiheda-kadalipu-joudis-kolm-parnumaalast-rakett-69-pardale">
+              <span class="t">Three from Pärnu County make it aboard Rakett 69</span>
+              <span class="src">Pärnu Postimees · 2024</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://koidulag.edu.ee/et/uudised/estronaut-aaron-unt-kohtus-presidendiga">
+              <span class="t">Estronaut Aaron Unt meets the President</span>
+              <span class="src">Koidula Gümnaasium · 2024</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://innovationsoftheworld.com/genz-founders-cultivating-estonias-next-wave-of-unicorns/">
+              <span class="t">Gen Z Founders: cultivating Estonia's next wave of unicorns</span>
+              <span class="src">Innovations of the World</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>The fastest way to reach Aaron is on <a href="https://www.linkedin.com/in/aaron-unt" style="color: var(--accent);">LinkedIn</a> or <a href="https://x.com/UntAaron" style="color: var(--accent);">X</a>.</p>
+    <section class="contact" id="contact">
+      <div class="wrap reveal">
+        <h2>Get in touch</h2>
+        <p>The fastest way to reach Aaron.</p>
+        <div class="links">
+          <a class="btn btn-solid" href="https://www.linkedin.com/in/aaron-unt">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://x.com/UntAaron">X / Twitter</a>
+          <a class="btn btn-ghost" href="https://github.com/aaron-unt">GitHub</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <div class="wrap">
-      <p>© 2026 Aaron Unt · Pärnu, Estonia</p>
+    <div class="wrap foot">
+      <span>© 2026 Aaron Unt</span>
+      <span>Pärnu, Estonia</span>
     </div>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
 
 </body>
 </html>
